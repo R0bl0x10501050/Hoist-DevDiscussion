@@ -1,0 +1,23 @@
+{
+	"name": "Hoist DevDiscussion",
+	"description": "Hoist DevDiscussion",
+	"version": "1.0.0",
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+	"permissions": [
+		"tabs",
+		"scripting"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"*://devforum.roblox.com/*"
+			],
+			"js": [
+				"alter.js"
+			]
+		}
+	]
+}
